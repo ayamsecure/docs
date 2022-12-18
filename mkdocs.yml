@@ -1,0 +1,53 @@
+site_name: Ayam Secure Docs
+site_description: Knowledge base for Ayam Secure
+site_author: Ayam Secure
+site_url: https://docs.ayamsecure.com
+site_dir: '/site'
+
+# Navigation menu
+nav:
+  - Home: index.md
+  - About:
+      - about/index.md
+  - Software:
+      - software/index.md
+
+# Repository
+repo_name: ayamsecure/docs
+repo_url: https://github.com/ayamsecure/docs
+
+theme:
+  name: 'material'
+  language: 'en'
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    # - navigation.tabs.sticky
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: amber
+      accent: amber
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # logo: 'images/[your logo]'
+  # feature:
+  #   tabs: false
+
+markdown_extensions:
+  - toc:
+      permalink: ⚓︎
+
+plugins:
+  - search

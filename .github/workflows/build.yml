@@ -1,0 +1,22 @@
+name: Ayam Secure Docs CI
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume
+      - uses: addnab/docker-run-action@v3
+        with:
+          image: squidfunk/mkdocs-material:8.3.9
+          # options: -v ${{ github.workspace }}:/docs
+          run: |
+            echo "Building docs"
+            build --strict
