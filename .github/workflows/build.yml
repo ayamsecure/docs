@@ -19,4 +19,4 @@ jobs:
           # options: -v ${{ github.workspace }}:/docs
           run: |
             echo "Building docs"
-            build --strict
+            mkdocs build --clean -v
